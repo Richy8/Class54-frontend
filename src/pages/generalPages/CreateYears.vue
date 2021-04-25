@@ -2,7 +2,7 @@
   <div class="create-years-page">
     <breadcrumb-bar item_two="Create Years" />
 
-    CREATE YEARS
+    CREATE YEARS VIEW
   </div>
 </template>
 
