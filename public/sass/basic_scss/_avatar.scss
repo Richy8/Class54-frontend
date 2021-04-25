@@ -1,0 +1,109 @@
+// PLACEHOLDER
+%avatar-text-styling {
+  width: 100%;
+  height: 100%;
+  background-color: $brand-dark-blue;
+  color: inherit;
+  border-radius: inherit;
+  line-height: 1em;
+  text-align: center;
+  position: relative;
+  letter-spacing: 0.05em;
+}
+
+.avatar {
+  @include square-shape(32);
+  overflow: hidden;
+  flex: 0 0 auto;
+  position: relative;
+  border-radius: 50%;
+  color: $brand-white;
+  vertical-align: middle;
+  border-style: none;
+  font-size: 13px;
+  box-sizing: border-box;
+
+  &-square {
+    border-radius: 5px;
+  }
+
+  .avatar-img {
+    @include center-placement;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  @include breakpoint-down(sm) {
+    @include square-shape(30);
+  }
+}
+
+.avatar-indicator {
+  @include square-shape(8);
+  border-radius: 50%;
+}
+
+.avatar-sm {
+  @include square-shape(24);
+  font-size: 11px;
+}
+
+.avatar-sm-md {
+  @include square-shape(42);
+
+  @include breakpoint-down(xl) {
+    @include square-shape(38);
+  }
+
+  @include breakpoint-down(lg) {
+    @include square-shape(36);
+  }
+
+  @include breakpoint-down(sm) {
+    @include square-shape(33);
+  }
+}
+
+.avatar-md {
+  @include square-shape(46);
+
+  @include breakpoint-down(xl) {
+    @include square-shape(42);
+  }
+
+  @include breakpoint-down(md) {
+    @include square-shape(38);
+  }
+
+  @include breakpoint-down(sm) {
+    @include square-shape(35);
+  }
+}
+
+.avatar-lg {
+  @include square-shape(128);
+  font-size: 64px;
+
+  @include breakpoint-down(lg) {
+    @include square-shape(96);
+    font-size: 48px;
+  }
+
+  @include breakpoint-down(md) {
+    @include square-shape(100);
+  }
+
+  @include breakpoint-down(xs) {
+    @include square-shape(85);
+  }
+}
+
+.avatar-text {
+  @extend %avatar-text-styling;
+  @include flex-row-center-nowrap;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: local(Source Sans Pro-Regular);
+}
+
+$body_font: 'Source Sans Pro',
+Roboto,
+Segoe UI,
+Open Sans,
+sans-serif;
+
+body {
+    font-family: $body_font;
+    font-display: fallback;
+}

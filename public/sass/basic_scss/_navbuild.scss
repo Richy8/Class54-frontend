@@ -1,0 +1,349 @@
+.topbar-build {
+  @include flex-row-between-nowrap;
+
+  .page-title {
+    @include font-height(15, 25);
+
+    @include breakpoint-down(lg) {
+      @include font-height(14, 22);
+    }
+
+    @include breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .burger-menu {
+    @include rectangle-shape(25, 16);
+    position: relative;
+    display: none;
+
+    .line {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $brand-dark-blue;
+    }
+
+    .line-one {
+      top: 0;
+    }
+
+    .line-two {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .line-three {
+      bottom: 0;
+    }
+
+    @include breakpoint-down(sm) {
+      display: unset;
+    }
+  }
+
+  .user-profile {
+    @include flex-row-end-nowrap;
+
+    .avatar {
+      @include breakpoint-down(lg) {
+        margin-right: 12px !important;
+      }
+    }
+
+    .profile-details {
+      @include flex-row-end-nowrap;
+
+      .user-name {
+        @include font-height(15, 20);
+        letter-spacing: 0.02em;
+
+        @include breakpoint-down(lg) {
+          margin-right: 12px !important;
+          @include font-height(14, 22);
+        }
+      }
+
+      .icon {
+        position: relative;
+        top: 1px;
+      }
+
+      .profile-dropdown {
+        top: 30px;
+        right: -7px;
+        width: 145px;
+        background: $brand-white;
+        z-index: 11;
+        margin: 10px 0;
+
+        a {
+          @include flex-row-start-nowrap;
+          align-items: center;
+          @include font-height(13.5, 20);
+          @include transition(0.3s);
+          padding: 9px 16px;
+          color: $dark-text;
+
+          .icon {
+            margin-top: -5px;
+            margin-right: 10px;
+
+            .path1,
+            .path2 {
+              &:before {
+                @include transition(0.3s);
+              }
+            }
+          }
+
+          .text {
+            @include transition(0.3s);
+          }
+
+          &:hover {
+            background: rgba($brand-off-green, 0.05);
+
+            .icon {
+              .path1,
+              .path2 {
+                &:before {
+                  color: $brand-green;
+                }
+              }
+            }
+
+            .text {
+              color: $brand-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// NAV SIDEBAR BUILD
+.sidebar-build {
+  @include flex-column-start-start;
+  .logo-row {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    margin-left: 12.5px;
+    padding: 5px 25px;
+
+    @include breakpoint-down(xl) {
+      margin-left: -5px;
+      padding: 5px 0px;
+
+      img {
+        @include rectangle-shape(200, 45);
+      }
+    }
+
+    @include breakpoint-down(lg) {
+      margin-top: 10px;
+      margin-left: -20px;
+      padding: 5px 5px;
+
+      img {
+        @include rectangle-shape(190, 42);
+      }
+    }
+
+    @include breakpoint-down(sm) {
+      margin-bottom: 13px;
+      padding: 5px 30px;
+
+      img {
+        @include rectangle-shape(210, 48);
+      }
+    }
+
+    @include breakpoint-custom-down(380) {
+      padding: 5px 18px;
+    }
+  }
+}
+
+.navlist {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  overflow: auto;
+  padding: 5px 25px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $brand-border-grey;
+  }
+
+  @include breakpoint-down(lg) {
+    padding: 5px 18px;
+  }
+
+  @include breakpoint-down(md) {
+    padding: 5px 13px;
+  }
+
+  @include breakpoint-custom-down(540) {
+    padding: 5px 30px;
+  }
+
+  @include breakpoint-custom-down(380) {
+    padding: 5px 18px;
+  }
+
+  .nav-title-row {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include font-height(14, 18);
+    margin-bottom: 8px;
+
+    @include breakpoint-down(md) {
+      @include font-height(12, 16);
+    }
+
+    @include breakpoint-down(sm) {
+      @include font-height(13, 18);
+    }
+
+    @include breakpoint-down(xs) {
+      @include font-height(12, 16);
+    }
+  }
+
+  .nav-wrapper {
+    position: relative;
+    @include transition(0.3s);
+
+    .nav-item-row {
+      @include transition(0.3s);
+      position: relative;
+      @include flex-row-start-nowrap;
+      align-items: center;
+      @include font-height(14, 18);
+      @include transition(0.3s);
+      padding: 7px 0px;
+      color: $brand-black;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: left;
+
+      @include breakpoint-down(md) {
+        @include font-height(12, 16);
+      }
+
+      @include breakpoint-down(sm) {
+        @include font-height(13, 18);
+      }
+
+      @include breakpoint-down(xs) {
+        @include font-height(12, 16);
+      }
+
+      .icon {
+        @include transition(0.3s);
+        margin-top: -6px;
+        margin-right: 10px;
+
+        .path1,
+        .path2,
+        .path3,
+        .path4 {
+          &:before {
+            @include transition(0.3s);
+          }
+        }
+      }
+
+      .text {
+        @include transition(0.3s);
+      }
+
+      .caret {
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .icon {
+          @include transition(0.2s);
+
+          @include breakpoint-down(md) {
+            font-size: 15.5px !important;
+          }
+
+          @include breakpoint-down(sm) {
+            font-size: 17px !important;
+          }
+
+          @include breakpoint-down(xs) {
+            font-size: 16px !important;
+          }
+        }
+      }
+
+      &:hover {
+        .icon {
+          color: $brand-green;
+          .path1,
+          .path2,
+          .path3,
+          .path4 {
+            &:before {
+              color: $brand-green;
+            }
+          }
+        }
+
+        .text {
+          color: $brand-green;
+        }
+
+        .caret {
+          color: $brand-green;
+        }
+      }
+    }
+
+    .nav-sub-row {
+      margin-bottom: 6.5px;
+
+      .text {
+        margin-left: 16px;
+      }
+    }
+
+    .nav-item-active {
+      .icon {
+        color: $brand-green;
+        .path1,
+        .path2,
+        .path3,
+        .path4 {
+          &:before {
+            color: $brand-green;
+          }
+        }
+      }
+
+      .text {
+        color: $brand-green;
+      }
+
+      .caret {
+        color: $brand-green;
+      }
+    }
+  }
+}

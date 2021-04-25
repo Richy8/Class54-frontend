@@ -1,0 +1,62 @@
+// ANIMATIONS
+@keyframes panel-slide-down {
+  0%,
+  30% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes panel-slide-up {
+  0%,
+  30% {
+    margin-bottom: -30px;
+    opacity: 0;
+  }
+
+  to {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+.auth-form {
+  .auth-text {
+    @include font-height(16, 20);
+  }
+}
+
+.card-metric-row {
+  @include flex-row-between-nowrap;
+  align-items: flex-start;
+  overflow: auto;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.overview-card-section {
+  @include flex-row-between-wrap;
+  align-items: flex-start;
+
+  .left-block,
+  .right-block {
+    width: 49%;
+    height: auto;
+
+    @include breakpoint-down(xl) {
+      width: 49.5%;
+    }
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}

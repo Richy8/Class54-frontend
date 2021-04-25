@@ -1,0 +1,145 @@
+// AUTH BUILD LAYOUT
+.build-layout {
+  .build-row {
+    @include flex-row-center-nowrap;
+
+    .auth-logo-block,
+    .error-logo-block {
+      @include flex-row-center-nowrap;
+    }
+  }
+}
+
+.auth-build {
+  top: 135px;
+}
+
+.error-build {
+  @include stretch-area;
+  @include flex-column-center;
+
+  .build-row {
+    height: 100vh;
+
+    .error-logo-block {
+      img {
+        @include rectangle-shape(250, 220);
+      }
+    }
+  }
+
+  .error-title {
+    @include font-height(52, 62);
+  }
+
+  .info-text {
+    @include font-height(17, 28);
+  }
+
+  .info-sub-text {
+    @include font-height(16, 26);
+  }
+}
+
+.base-build {
+  @include flex-row-between-nowrap;
+  align-items: flex-start;
+  width: 100%;
+
+  .sidebar-build-cover {
+    @include fixed-display-area;
+    width: 18%;
+
+    @include breakpoint-down(lg) {
+      width: 25%;
+    }
+
+    @include breakpoint-custom-down(640) {
+      width: 28%;
+    }
+
+    @include breakpoint-down(sm) {
+      z-index: 11;
+      width: 100%;
+      background: rgba(#acacac, 0.65);
+    }
+
+    .sidebar-build {
+      @include stretch-area;
+      bottom: 0;
+      border: 1px solid $brand-border-grey;
+
+      @include breakpoint-down(sm) {
+        width: 66%;
+      }
+
+      @include breakpoint-custom-down(380) {
+        width: 70%;
+      }
+    }
+  }
+
+  .body-build {
+    left: 18%;
+    width: 82%;
+
+    @include breakpoint-down(lg) {
+      left: 25%;
+      width: 75%;
+    }
+
+    @include breakpoint-custom-down(640) {
+      left: 28%;
+      width: 72%;
+    }
+
+    @include breakpoint-down(sm) {
+      left: 0;
+      width: 100%;
+    }
+
+    .topbar-build {
+      width: 82%;
+      position: fixed;
+      top: 0;
+      @include flex-row-between-wrap;
+      padding: 14px 30px;
+
+      @include breakpoint-down(lg) {
+        width: 75%;
+        padding: 14px 18px;
+      }
+
+      @include breakpoint-custom-down(820) {
+        padding: 14px 14px;
+      }
+
+      @include breakpoint-custom-down(640) {
+        width: 72%;
+      }
+
+      @include breakpoint-down(sm) {
+        padding: 14px 20px;
+        width: 100%;
+      }
+    }
+
+    .content-build {
+      top: 74px;
+      padding: 25px 30px;
+
+      @include breakpoint-down(lg) {
+        padding: 20px 18px;
+      }
+
+      @include breakpoint-custom-down(820) {
+        top: 68px;
+        padding: 14px 14px;
+      }
+
+      @include breakpoint-down(sm) {
+        padding: 14px 20px;
+      }
+    }
+  }
+}

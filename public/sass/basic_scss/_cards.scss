@@ -1,0 +1,184 @@
+// METRIC CARD
+.metric-card {
+  @include flex-row-between-nowrap;
+  align-items: flex-start;
+  @include transition(0.3s);
+  padding: 27px 23px;
+  border: 1px solid $brand-border-grey;
+  box-sizing: border-box;
+  min-width: 240px;
+  width: 280px;
+  height: 100px;
+  margin-right: 8px;
+
+  &:last-of-type {
+    margin-right: 0px;
+  }
+
+  @include breakpoint-down(sm) {
+    min-width: 220px;
+    padding: 25px 20px;
+    margin-right: 6px;
+  }
+
+  .left {
+    .value-text {
+      @include font-height(18, 20);
+      letter-spacing: 0.02em;
+
+      @include breakpoint-down(sm) {
+        @include font-height(17, 18);
+      }
+    }
+
+    .meta-text {
+      @include font-height(11.7, 20);
+      letter-spacing: 0.02em;
+      text-align: left;
+
+      @include breakpoint-down(sm) {
+        @include font-height(11.5, 18);
+      }
+    }
+  }
+
+  .right {
+    color: $brand-green;
+    .path1,
+    .path2,
+    .path3,
+    .path4 {
+      &:before {
+        color: $brand-green;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+%title-row {
+  @include font-height(15, 16);
+  padding: 13px 0px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: $brand-black;
+  text-align: left;
+
+  @include breakpoint-down(sm) {
+    @include font-height(14.5, 15);
+  }
+}
+
+.general-overview-block,
+.country-overview-block {
+  padding: 16px 25px;
+  background: $brand-white;
+  border: 1px solid $brand-base-grey;
+
+  .card-title-row {
+    @extend %title-row;
+  }
+
+  .card-row {
+    @include flex-row-between-nowrap;
+    padding: 13px 0px;
+    margin-bottom: 10px;
+
+    .left {
+      @include flex-row-start-nowrap;
+
+      .avatar {
+        margin-right: 20px;
+
+        @include breakpoint-down(sm) {
+          margin-right: 15px;
+        }
+      }
+
+      .text {
+        @include font-height(15, 16);
+        color: $dark-text;
+
+        @include breakpoint-down(sm) {
+          @include font-height(14.5, 15);
+        }
+      }
+    }
+
+    .right {
+      @include font-height(15, 16);
+      text-align: right;
+      font-weight: 600;
+      color: $brand-black;
+
+      @include breakpoint-down(sm) {
+        @include font-height(14.5, 15);
+      }
+    }
+  }
+}
+
+.quick-link-block {
+  padding: 16px 25px;
+
+  .card-title-row {
+    @extend %title-row;
+  }
+
+  .left-card,
+  .right-card {
+    width: 49%;
+    height: auto;
+    padding: 18px 24px;
+    border-radius: 4px;
+    @include transition(0.3s);
+
+    &:hover {
+      transform: scale(0.98);
+    }
+
+    @include breakpoint-down(xl) {
+      width: 49.5%;
+    }
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  .left-card {
+    border: 1px solid $brand-border-grey;
+    background: $brand-grey;
+
+    @include breakpoint-down(md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .right-card {
+    border: 1px solid $brand-accent-green;
+    background: $brand-cloudy-green;
+  }
+
+  .title-text {
+    @include font-height(15, 16);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .meta-text {
+    font-weight: 600;
+    @include font-height(13, 15);
+
+    .icon {
+      position: relative;
+      font-size: 15.5px;
+      top: 2px;
+      left: 5px;
+      transform: rotate(315deg);
+    }
+  }
+}
