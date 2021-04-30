@@ -102,7 +102,11 @@ export default {
       let current_route = this.$route.name;
 
       this.children.map((item) => child_routes.push(item.route_link));
-      if (child_routes.includes(current_route)) return true;
+      if (
+        child_routes.includes(current_route) ||
+        this.parent.route_link === current_route
+      )
+        return true;
       else return false;
     },
   },
