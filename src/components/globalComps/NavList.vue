@@ -58,8 +58,11 @@ export default {
                 route_icon: "topic",
               },
               children: [
-                { route_name: "All Topics", route_link: "" },
-                { route_name: "Create Topic", route_link: "" },
+                { route_name: "All Topics", route_link: "Class54AllTopics" },
+                {
+                  route_name: "Create Topic",
+                  route_link: "Class54CreateTopics",
+                },
               ],
             },
             {
@@ -69,8 +72,14 @@ export default {
                 route_icon: "substract",
               },
               children: [
-                { route_name: "All Faculties", route_link: "" },
-                { route_name: "Create Faculty", route_link: "" },
+                {
+                  route_name: "All Faculties",
+                  route_link: "Class54AllFaculty",
+                },
+                {
+                  route_name: "Create Faculty",
+                  route_link: "Class54CreateFaculty",
+                },
               ],
             },
             {
@@ -100,7 +109,7 @@ export default {
               parent: {
                 route_name: "Country",
                 route_link: "",
-                route_icon: "country",
+                route_icon: "flag",
               },
               children: [
                 { route_name: "All Countries", route_link: "" },

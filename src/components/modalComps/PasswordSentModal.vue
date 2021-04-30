@@ -7,7 +7,7 @@
     <!-- MODAL BODY -->
     <template slot="modal-cover-body">
       <div class="password-sent-modal h-auto mgt-36">
-        <div class="icon mgb-25">
+        <div class="icon mgb-25 mgl--10">
           <mail-icon size="cfont-48" />
         </div>
 
@@ -19,9 +19,13 @@
         </div>
 
         <!-- META TEXT -->
-        <div class="meta-text dark-text text-center">
+        <div class="meta-text dark-text text-center mgb-10">
           The email contains instructions on how you will reset your forgotten
           password.
+        </div>
+
+        <div class="button-row d-flex justify-content-center">
+          <button class="btn btn-md btn-primary">Proceed</button>
         </div>
       </div>
     </template>

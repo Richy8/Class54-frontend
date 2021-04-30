@@ -86,7 +86,7 @@ button[disabled] {
 .btn-md {
   min-height: 2.875rem;
   @include font-height(13, 14);
-  padding: 18px 36px;
+  padding: 18px 34px;
 }
 
 .btn-primary {
@@ -118,6 +118,21 @@ button[disabled] {
   }
 }
 
+.btn-red {
+  background-color: $brand-red !important;
+  color: $brand-white !important;
+
+  &:hover,
+  &:focus {
+    background-color: $deep-red !important;
+  }
+
+  &:disabled {
+    background-color: #f3fff9 !important;
+    color: #90caad !important;
+  }
+}
+
 .btn-outline {
   border: 1px solid $brand-dark-blue !important;
   color: $brand-dark-blue !important;
@@ -138,8 +153,12 @@ button[disabled] {
 .breadcrumb-bar {
   @include flex-row-start-nowrap;
   @include font-height(14, 25);
-  margin-bottom: 19px;
+  margin-bottom: 22px;
   color: $light-dark-text;
+
+  @include breakpoint-down(sm) {
+    @include font-height(13, 25);
+  }
 
   .bar {
     @include flex-row-start-nowrap;
@@ -150,6 +169,127 @@ button[disabled] {
       top: 1px;
       color: $light-dark-text;
       font-size: 13px;
+    }
+  }
+}
+
+// PAGINATION
+.pagination-row {
+  @include flex-row-between-wrap;
+
+  .left {
+    @include flex-row-start-nowrap;
+    padding-right: 30px;
+
+    .select-page-item {
+      position: relative;
+      @include font-height(13.5, 24);
+      font-weight: 500;
+      padding: 5px 0px;
+      margin-right: 16px;
+
+      @include breakpoint-down(sm) {
+        @include font-height(12.75, 22);
+      }
+
+      span {
+        position: relative;
+        font-size: 18px;
+        top: 2.25px;
+
+        @include breakpoint-down(sm) {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .pagination-text {
+      @include font-height(13.5, 24);
+
+      @include breakpoint-down(sm) {
+        @include font-height(12.75, 22);
+      }
+    }
+  }
+
+  .right {
+    @include flex-row-end-nowrap;
+
+    @include breakpoint-custom-down(827) {
+      margin-top: 15px;
+    }
+
+    @include breakpoint-custom-down(578) {
+      margin-top: 0px;
+    }
+
+    @include breakpoint-custom-down(565) {
+      margin-top: 15px;
+    }
+
+    .nav {
+      padding: 7px;
+      min-width: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      @include transition(0.4s);
+
+      @include breakpoint-down(sm) {
+        padding: 6px;
+        min-width: 22px;
+      }
+
+      .icon {
+        font-size: 18.5px;
+        color: $light-dark-text;
+        font-weight: 600;
+
+        @include breakpoint-down(sm) {
+          font-size: 17.75px;
+        }
+      }
+
+      &:hover {
+        background: rgba($brand-cloudy-green, 0.7);
+      }
+    }
+
+    .paging {
+      @include flex-row-center-nowrap;
+      .item {
+        padding: 4.5px 5px;
+        min-width: 34px;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        @include font-height(13, 25);
+        color: $light-dark-text;
+        @include transition(0.4s);
+
+        @include breakpoint-down(sm) {
+          padding: 4px 4.5px;
+          min-width: 32px;
+          @include font-height(12.75, 24);
+        }
+
+        .icon {
+          font-size: 24px;
+        }
+
+        &:hover {
+          background: rgba($brand-cloudy-green, 0.7);
+        }
+      }
+
+      .active-item {
+        background: $brand-green;
+        color: $brand-white !important;
+
+        &:hover {
+          background: $brand-accent-green;
+        }
+      }
     }
   }
 }

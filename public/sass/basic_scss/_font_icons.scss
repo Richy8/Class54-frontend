@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?r79ewu");
-  src: url("../fonts/icomoon.eot?r79ewu#iefix") format("embedded-opentype"),
-    url("../fonts/icomoon.ttf?r79ewu") format("truetype"),
-    url("../fonts/icomoon.woff?r79ewu") format("woff"),
-    url("../fonts/icomoon.svg?r79ewu#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?fzse6h");
+  src: url("../fonts/icomoon.eot?fzse6h#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?fzse6h") format("truetype"),
+    url("../fonts/icomoon.woff?fzse6h") format("woff"),
+    url("../fonts/icomoon.svg?fzse6h#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -40,7 +40,6 @@
   }
 
   .path3:before {
-    z-index: 1;
     content: "\e902";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
@@ -118,7 +117,7 @@
   }
 }
 
-.icon-layers {
+.icon-flag {
   .path1:before {
     content: "\e90e";
     color: rgb(0, 0, 0);
@@ -132,25 +131,24 @@
   }
 }
 
-.icon-logout {
+.icon-layers {
   .path1:before {
     content: "\e910";
-    color: rgb(52, 58, 64);
+    color: rgb(0, 0, 0);
   }
 
   .path2:before {
     content: "\e911";
     // margin-left: -1em;
-    color: rgb(52, 58, 64);
+    color: rgb(0, 0, 0);
     opacity: 0.3;
   }
 }
 
-.icon-logs {
+.icon-logout {
   .path1:before {
     content: "\e912";
     color: rgb(52, 58, 64);
-    opacity: 0.3;
   }
 
   .path2:before {
@@ -159,15 +157,30 @@
     color: rgb(52, 58, 64);
     opacity: 0.3;
   }
+}
+
+.icon-logs {
+  .path1:before {
+    content: "\e914";
+    color: rgb(52, 58, 64);
+    opacity: 0.3;
+  }
+
+  .path2:before {
+    content: "\e915";
+    // margin-left: -1em;
+    color: rgb(52, 58, 64);
+    opacity: 0.3;
+  }
 
   .path3:before {
-    content: "\e914";
+    content: "\e916";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
   }
 
   .path4:before {
-    content: "\e915";
+    content: "\e917";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
     opacity: 0.3;
@@ -176,32 +189,33 @@
 
 .icon-mail {
   .path1:before {
-    content: "\e916";
-    color: rgb(52, 58, 64);
-    opacity: 0.3;
-  }
-
-  .path2:before {
-    content: "\e917";
-    color: rgb(52, 58, 64);
-  }
-}
-
-.icon-mobile {
-  .path1:before {
     content: "\e918";
     color: rgb(0, 0, 0);
+    opacity: 0.3;
   }
 
   .path2:before {
     content: "\e919";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
+  }
+}
+
+.icon-mobile {
+  .path1:before {
+    content: "\e91a";
+    color: rgb(0, 0, 0);
+  }
+
+  .path2:before {
+    content: "\e91b";
+    // margin-left: -1em;
+    color: rgb(0, 0, 0);
     opacity: 0.3;
   }
 
   .path3:before {
-    content: "\e91a";
+    content: "\e91c";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
   }
@@ -209,12 +223,12 @@
 
 .icon-notification {
   .path1:before {
-    content: "\e91b";
+    content: "\e91d";
     color: rgb(52, 58, 64);
   }
 
   .path2:before {
-    content: "\e91c";
+    content: "\e91e";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
     opacity: 0.3;
@@ -223,12 +237,12 @@
 
 .icon-novel {
   .path1:before {
-    content: "\e91d";
+    content: "\e91f";
     color: rgb(0, 0, 0);
   }
 
   .path2:before {
-    content: "\e91e";
+    content: "\e920";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
     opacity: 0.3;
@@ -237,13 +251,13 @@
 
 .icon-profile {
   .path1:before {
-    content: "\e91f";
+    content: "\e921";
     color: rgb(52, 58, 64);
     opacity: 0.3;
   }
 
   .path2:before {
-    content: "\e920";
+    content: "\e922";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
   }
@@ -251,19 +265,19 @@
 
 .icon-question {
   .path1:before {
-    content: "\e921";
+    content: "\e923";
     color: rgb(0, 0, 0);
     opacity: 0.3;
   }
 
   .path2:before {
-    content: "\e922";
+    content: "\e924";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
   }
 
   .path3:before {
-    content: "\e923";
+    content: "\e925";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
   }
@@ -271,13 +285,13 @@
 
 .icon-register {
   .path1:before {
-    content: "\e924";
+    content: "\e926";
     color: rgb(0, 0, 0);
     opacity: 0.3;
   }
 
   .path2:before {
-    content: "\e925";
+    content: "\e927";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
   }
@@ -285,18 +299,18 @@
 
 .icon-school {
   .path1:before {
-    content: "\e926";
+    content: "\e928";
     color: rgb(0, 0, 0);
   }
 
   .path2:before {
-    content: "\e927";
+    content: "\e929";
     // margin-left: -1em;
     color: rgb(255, 255, 255);
   }
 
   .path3:before {
-    content: "\e928";
+    content: "\e92a";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
     opacity: 0.3;
@@ -305,12 +319,12 @@
 
 .icon-study-note {
   .path1:before {
-    content: "\e929";
+    content: "\e92b";
     color: rgb(0, 0, 0);
   }
 
   .path2:before {
-    content: "\e92a";
+    content: "\e92c";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
     opacity: 0.3;
@@ -318,17 +332,17 @@
 }
 
 .icon-subject:before {
-  content: "\e92b";
+  content: "\e92d";
 }
 
 .icon-subscribe {
   .path1:before {
-    content: "\e92c";
+    content: "\e92e";
     color: rgb(52, 58, 64);
   }
 
   .path2:before {
-    content: "\e92d";
+    content: "\e92f";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
     opacity: 0.3;
@@ -337,12 +351,12 @@
 
 .icon-substract {
   .path1:before {
-    content: "\e92e";
+    content: "\e930";
     color: rgb(0, 0, 0);
   }
 
   .path2:before {
-    content: "\e92f";
+    content: "\e931";
     // margin-left: -1em;
     color: rgb(0, 0, 0);
     opacity: 0.3;
@@ -350,20 +364,6 @@
 }
 
 .icon-success {
-  .path1:before {
-    content: "\e930";
-    color: rgb(0, 0, 0);
-    opacity: 0.3;
-  }
-
-  .path2:before {
-    content: "\e931";
-    // margin-left: -1em;
-    color: rgb(0, 0, 0);
-  }
-}
-
-.icon-topic {
   .path1:before {
     content: "\e932";
     color: rgb(0, 0, 0);
@@ -377,7 +377,7 @@
   }
 }
 
-.icon-upload {
+.icon-topic {
   .path1:before {
     content: "\e934";
     color: rgb(0, 0, 0);
@@ -391,7 +391,7 @@
   }
 }
 
-.icon-users {
+.icon-upload {
   .path1:before {
     content: "\e936";
     color: rgb(0, 0, 0);
@@ -405,159 +405,177 @@
   }
 }
 
-.icon-wallet {
+.icon-users {
   .path1:before {
     content: "\e938";
-    color: rgb(52, 58, 64);
+    color: rgb(0, 0, 0);
     opacity: 0.3;
   }
 
   .path2:before {
     content: "\e939";
     // margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.icon-wallet {
+  .path1:before {
+    content: "\e93a";
+    color: rgb(52, 58, 64);
+    opacity: 0.3;
+  }
+
+  .path2:before {
+    content: "\e93b";
+    // margin-left: -1em;
     color: rgb(52, 58, 64);
     opacity: 0.3;
   }
 
   .path3:before {
-    content: "\e93a";
+    content: "\e93c";
     // margin-left: -1em;
     color: rgb(52, 58, 64);
   }
 }
 
 .icon-add:before {
-  content: "\e93b";
-}
-
-.icon-alert:before {
-  content: "\e93c";
-}
-
-.icon-arrow-left:before {
   content: "\e93d";
 }
 
-.icon-arrow-right:before {
+.icon-alert:before {
   content: "\e93e";
 }
 
-.icon-atom:before {
+.icon-arrow-left:before {
   content: "\e93f";
 }
 
-.icon-calendar:before {
+.icon-arrow-right:before {
   content: "\e940";
 }
 
-.icon-call:before {
+.icon-atom:before {
   content: "\e941";
 }
 
-.icon-camera:before {
+.icon-calendar:before {
   content: "\e942";
 }
 
-.icon-checkmark:before {
+.icon-call:before {
   content: "\e943";
 }
 
-.icon-chevron-down:before {
+.icon-camera:before {
   content: "\e944";
 }
 
-.icon-close:before {
+.icon-checkmark:before {
   content: "\e945";
 }
 
-.icon-copy:before {
+.icon-chevron-down:before {
   content: "\e946";
 }
 
-.icon-dashboard:before {
+.icon-close:before {
   content: "\e947";
 }
 
-.icon-delete:before {
+.icon-copy:before {
   content: "\e948";
 }
 
-.icon-disable:before {
+.icon-dashboard:before {
   content: "\e949";
 }
 
-.icon-dna:before {
+.icon-delete:before {
   content: "\e94a";
 }
 
-.icon-document:before {
+.icon-disable:before {
   content: "\e94b";
 }
 
-.icon-download:before {
+.icon-dna:before {
   content: "\e94c";
 }
 
-.icon-edit:before {
+.icon-document:before {
   content: "\e94d";
 }
 
-.icon-empty:before {
+.icon-download:before {
   content: "\e94e";
 }
 
-.icon-family:before {
+.icon-edit:before {
   content: "\e94f";
 }
 
-.icon-filter:before {
+.icon-empty:before {
   content: "\e950";
 }
 
-.icon-hamburger:before {
+.icon-error-alert:before {
   content: "\e951";
 }
 
-.icon-info:before {
+.icon-family:before {
   content: "\e952";
 }
 
-.icon-math:before {
+.icon-filter:before {
   content: "\e953";
 }
 
-.icon-minus:before {
+.icon-hamburger:before {
   content: "\e954";
 }
 
-.icon-more:before {
+.icon-info:before {
   content: "\e955";
 }
 
-.icon-naira:before {
+.icon-math:before {
   content: "\e956";
 }
 
-.icon-pause:before {
+.icon-minus:before {
   content: "\e957";
 }
 
-.icon-plus:before {
+.icon-more:before {
   content: "\e958";
 }
 
-.icon-search:before {
+.icon-naira:before {
   content: "\e959";
 }
 
-.icon-upload1:before {
+.icon-pause:before {
   content: "\e95a";
 }
 
-.icon-view:before {
+.icon-plus:before {
   content: "\e95b";
 }
 
-.icon-view-fill:before {
+.icon-search:before {
   content: "\e95c";
+}
+
+.icon-upload1:before {
+  content: "\e95d";
+}
+
+.icon-view:before {
+  content: "\e95e";
+}
+
+.icon-view-fill:before {
+  content: "\e95f";
 }

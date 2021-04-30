@@ -13,6 +13,7 @@ const baseRoutes = [
           ),
         meta: {
           requiresAuth: true,
+          title: "Dashboard",
         },
       },
 
@@ -25,6 +26,7 @@ const baseRoutes = [
           ),
         meta: {
           requiresAuth: true,
+          title: "Years",
         },
       },
 
@@ -37,6 +39,59 @@ const baseRoutes = [
           ),
         meta: {
           requiresAuth: true,
+          title: "Years",
+        },
+      },
+
+      {
+        path: "/topics/all-topics",
+        name: "Class54AllTopics",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/generalPages/AllTopics"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Topics",
+        },
+      },
+
+      {
+        path: "/topics/create-topics",
+        name: "Class54CreateTopics",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/generalPages/CreateTopics"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Topics",
+        },
+      },
+
+      {
+        path: "/faculty/all-faculty",
+        name: "Class54AllFaculty",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/generalPages/AllFaculty"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Faculties",
+        },
+      },
+
+      {
+        path: "/faculty/create-faculty",
+        name: "Class54CreateFaculty",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/generalPages/CreateFaculty"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Faculties",
         },
       },
     ],

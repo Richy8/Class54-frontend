@@ -1,0 +1,183 @@
+.table-header,
+.table-body {
+  @include flex-row-start-nowrap;
+  align-items: flex-start;
+  @include font-height(13.75, 16);
+  color: $brand-black;
+  padding: 11px;
+  margin-bottom: 14.5px;
+  width: auto;
+  min-width: max-content;
+}
+
+.table-header {
+  background-color: $brand-grey;
+  font-weight: bold;
+}
+
+.table-body {
+  border-bottom: 1px solid rgba($brand-border-grey, 0.5);
+}
+
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+}
+
+.table-dropdown {
+  position: absolute;
+  width: 140px;
+  margin: 8px 0px;
+  background-color: $brand-white;
+  border-radius: 4px;
+  z-index: 1;
+  overflow: hidden;
+
+  @include breakpoint-down(md) {
+    width: 115px;
+  }
+
+  .item {
+    @include flex-row-start-nowrap;
+    @include font-height(13.5, 24);
+    padding: 9px 16px;
+    color: $dark-text;
+    position: relative;
+    @include transition(0.4s);
+
+    @include breakpoint-down(md) {
+      @include font-height(13, 19);
+      padding: 8px 15px;
+    }
+
+    .icon {
+      position: relative;
+      font-size: 16.5px;
+      margin-right: 15px;
+
+      @include breakpoint-down(md) {
+        font-size: 15px;
+      }
+    }
+
+    .value-text {
+      font-family: "Source Sans Pro";
+    }
+
+    &:hover {
+      background: $brand-grey;
+    }
+  }
+}
+
+// YEARS TABLE
+.years-table,
+.topics-table,
+.faculty-table {
+  position: relative;
+  overflow-x: auto;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $brand-border-grey;
+  }
+
+  @include breakpoint-down(md) {
+    width: auto;
+  }
+
+  .set-one {
+    width: 25%;
+
+    @include breakpoint-down(md) {
+      width: 125px;
+    }
+  }
+
+  .set-two {
+    width: 25%;
+
+    @include breakpoint-down(lg) {
+      width: 20%;
+    }
+
+    @include breakpoint-down(md) {
+      width: 110px;
+    }
+  }
+
+  .set-three {
+    width: 30%;
+
+    @include breakpoint-down(lg) {
+      width: 35%;
+    }
+
+    @include breakpoint-down(md) {
+      width: 200px;
+    }
+  }
+
+  .set-four {
+    width: 20%;
+
+    @include breakpoint-down(md) {
+      width: 120px;
+    }
+  }
+}
+
+.faculty-table {
+  .set-one {
+    width: 15%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-two {
+    width: 25%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 130px;
+    }
+  }
+
+  .set-three {
+    width: 30%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 200px;
+    }
+  }
+
+  .set-four {
+    width: 10%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+  .set-five {
+    width: 25%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+}

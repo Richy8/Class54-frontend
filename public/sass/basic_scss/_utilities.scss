@@ -60,12 +60,12 @@ Cursor, Selection, Link and Transition
 }
 
 .smooth-transition {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .smooth-animation {
-  transition: top 0.5s ease-in-out;
-  animation: panel-slide-down 0.6s ease-in-out forwards;
+  transition: top 0.3s ease-in-out;
+  animation: panel-slide-down 0.3s ease-in-out forwards;
 }
 
 /* ========================
@@ -274,4 +274,16 @@ $weights: 400, 500, 600, 700, 800, 900;
 
 .rotate-270 {
   transform: rotate(270deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate--90 {
+  transform: rotate(-90deg);
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
 }

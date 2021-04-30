@@ -2,7 +2,7 @@
   <div class="topbar-build brand-white-bg index-9">
     <!-- PAGE TITLE -->
     <div class="page-title font-weight-600 dark-text">
-      Dashboard
+      {{ $route.meta.title || "Dashboard" }}
     </div>
 
     <!-- HAMBURGER MENU -->
