@@ -1,165 +1,165 @@
 // PLACEHOLDER
 %modal-styling {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    background: $brand-white;
-    box-sizing: border-box;
-    overflow: auto;
-    z-index: 3000;
-    @include transition(0.5s);
-    animation: panel-slide-down .6s ease-in-out forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  background: $brand-white;
+  box-sizing: border-box;
+  overflow: auto;
+  z-index: 3000;
+  @include transition(0.55s);
+  animation: panel-slide-left 0.6s ease-in-out forwards;
 }
 
 .modal-overlay {
-    @include transition(0.5s);
-    @include stretch-area;
-    position: fixed;
-    overflow: auto !important;
-    z-index: 2000;
-    background: rgba($brand-black, .9);
+  @include transition(0.5s);
+  @include stretch-area;
+  position: fixed;
+  overflow: auto !important;
+  z-index: 2000;
+  background: rgba($brand-black, 0.9);
 
-    .modal-box {
-        @extend %modal-styling;
-        padding: 20px 10px;
-        padding-top: 35px;
-        
-        @include breakpoint-down(sm) {
-            padding: 20px 6px;
-        }
+  .modal-box {
+    @extend %modal-styling;
+    padding: 20px 10px;
+    padding-top: 35px;
 
-        .modal-title {
-            @include font-height(16, 22);
-            font-weight: bold;
-            text-transform: uppercase;
-            color: $brand-dark-blue;
-
-            @include breakpoint-down(md) {
-                font-size: 15.5px;
-            }
-
-            @include breakpoint-down(sm) {
-                font-size: 14px;
-            }
-
-            @include breakpoint-down(xs) {
-                font-size: 13.5px;
-            }
-        }
-
-        .modal-body {
-            width: 100%;
-            height: auto;
-            margin-top: 20px;
-            margin-bottom: 5px;
-            padding-left: 15px;
-            padding-right: 15px;
-
-            @include breakpoint-down(sm) {
-                margin-top: 10px;
-            }
-
-            .modal-body-row {
-                position: relative;
-                margin-bottom: 35px;
-                
-                @include breakpoint-down(sm) {
-                    margin-bottom: 25px;
-                  }
-            }
-
-            .modal-body-top {
-                margin-top: -20px;
-                overflow-x: hidden;
-            }
-        }
+    @include breakpoint-down(sm) {
+      padding: 20px 6px;
     }
 
-    .modal-cover {
-        @extend %modal-styling;
-        overflow: hidden;
+    .modal-title {
+      @include font-height(16, 22);
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $brand-dark-blue;
 
-        .modal-cover-body {
-            position: relative;
-            width: 100%;
-            height: auto;
-            overflow-y: auto;
-            overflow-x: hidden;
+      @include breakpoint-down(md) {
+        font-size: 15.5px;
+      }
 
-            @include breakpoint-down(md) {
-                .pageClose {
-                    top: 30px;
-                    right: 30px;
-                }
-            }
+      @include breakpoint-down(sm) {
+        font-size: 14px;
+      }
 
-            @include breakpoint-down(sm) {
-                .pageClose {
-                    top: 27px;
-                }
-            }
-        }
-
-        .dialog-dismiss {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            @include square-shape(28);
-            border-radius: 50%;
-            background: $brand-white;
-            @include transition(0.4s);
-
-            &:hover {
-                background: $brand-off-green;
-            }
-
-            .icon {
-                @include center-placement;
-            }
-        }
+      @include breakpoint-down(xs) {
+        font-size: 13.5px;
+      }
     }
 
-    .modal-xs {
-        width: 380px !important;
+    .modal-body {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
 
-        @include breakpoint-custom-up-down(450, 650) {
-            width: 380px !important;
-        }
+      @include breakpoint-down(sm) {
+        margin-top: 10px;
+      }
+
+      .modal-body-row {
+        position: relative;
+        margin-bottom: 35px;
 
         @include breakpoint-down(sm) {
-            width: 95% !important;
+          margin-bottom: 25px;
         }
+      }
+
+      .modal-body-top {
+        margin-top: -20px;
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  .modal-cover {
+    @extend %modal-styling;
+    overflow: hidden;
+
+    .modal-cover-body {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      @include breakpoint-down(md) {
+        .pageClose {
+          top: 30px;
+          right: 30px;
+        }
+      }
+
+      @include breakpoint-down(sm) {
+        .pageClose {
+          top: 27px;
+        }
+      }
     }
 
-    .modal-small {
-        width: 480px !important;
+    .dialog-dismiss {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      @include square-shape(28);
+      border-radius: 50%;
+      background: $brand-white;
+      @include transition(0.4s);
 
-        @include breakpoint-custom-up-down(450, 650) {
-            width: 520px !important;
-        }
+      &:hover {
+        background: $brand-off-green;
+      }
 
-        @include breakpoint-down(sm) {
-            width: 95% !important;
-        }
+      .icon {
+        @include center-placement;
+      }
+    }
+  }
+
+  .modal-xs {
+    width: 380px !important;
+
+    @include breakpoint-custom-up-down(450, 650) {
+      width: 380px !important;
     }
 
-    .modal-sm-md {
-        width: 600px;
-
-        @include breakpoint-custom-up-down(450, 650) {
-            width: 520px;
-        }
-
-        @include breakpoint-down(sm) {
-            width: 95%;
-        }
+    @include breakpoint-down(sm) {
+      width: 95% !important;
     }
+  }
+
+  .modal-small {
+    width: 480px !important;
+
+    @include breakpoint-custom-up-down(450, 650) {
+      width: 520px !important;
+    }
+
+    @include breakpoint-down(sm) {
+      width: 95% !important;
+    }
+  }
+
+  .modal-sm-md {
+    width: 600px;
+
+    @include breakpoint-custom-up-down(450, 650) {
+      width: 520px;
+    }
+
+    @include breakpoint-down(sm) {
+      width: 95%;
+    }
+  }
 }
 
 // MODAL COVER OVELAY BACKGROUND
 .modal-cover-overlay {
-    background-color: rgba($brand-black, .95);
+  background-color: rgba($brand-black, 0.95);
 }

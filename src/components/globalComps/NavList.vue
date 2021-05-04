@@ -89,8 +89,14 @@ export default {
                 route_icon: "layers",
               },
               children: [
-                { route_name: "All Categories", route_link: "" },
-                { route_name: "Create Category", route_link: "" },
+                {
+                  route_name: "All Categories",
+                  route_link: "Class54AllCategory",
+                },
+                {
+                  route_name: "Create Category",
+                  route_link: "Class54CreateCategory",
+                },
               ],
             },
             {
@@ -101,8 +107,11 @@ export default {
                 icon_size: "cfont-13 mgt-5 mgl-2",
               },
               children: [
-                { route_name: "All Subjects", route_link: "" },
-                { route_name: "Create Subject", route_link: "" },
+                { route_name: "All Subjects", route_link: "Class54AllSubject" },
+                {
+                  route_name: "Create Subject",
+                  route_link: "Class54CreateSubject",
+                },
               ],
             },
             {
@@ -112,8 +121,14 @@ export default {
                 route_icon: "flag",
               },
               children: [
-                { route_name: "All Countries", route_link: "" },
-                { route_name: "Create Country", route_link: "" },
+                {
+                  route_name: "All Countries",
+                  route_link: "Class54AllCountry",
+                },
+                {
+                  route_name: "Create Country",
+                  route_link: "Class54CreateCountry",
+                },
               ],
             },
             {
@@ -123,8 +138,11 @@ export default {
                 route_icon: "school",
               },
               children: [
-                { route_name: "All Schools", route_link: "" },
-                { route_name: "Create Schools", route_link: "" },
+                { route_name: "All Schools", route_link: "Class54AllSchool" },
+                {
+                  route_name: "Create Schools",
+                  route_link: "Class54CreateSchool",
+                },
               ],
             },
             {
@@ -135,8 +153,8 @@ export default {
                 icon_path: 3,
               },
               children: [
-                { route_name: "All Exams", route_link: "" },
-                { route_name: "Create Exam", route_link: "" },
+                { route_name: "All Exams", route_link: "Class54AllExam" },
+                { route_name: "Create Exam", route_link: "Class54CreateExam" },
               ],
             },
             {

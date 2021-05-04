@@ -89,6 +89,16 @@ button[disabled] {
   padding: 18px 34px;
 }
 
+.attach-btn {
+  @include breakpoint-down(sm) {
+    min-height: 3rem;
+
+    .text {
+      font-size: 13.5px !important;
+    }
+  }
+}
+
 .btn-primary {
   background-color: $brand-green !important;
   color: $brand-white !important;
@@ -125,6 +135,22 @@ button[disabled] {
   &:hover,
   &:focus {
     background-color: $deep-red !important;
+  }
+
+  &:disabled {
+    background-color: #f3fff9 !important;
+    color: #90caad !important;
+  }
+}
+
+.btn-cloudy {
+  background-color: $brand-cloudy-green !important;
+  color: $brand-dark-green !important;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-dark-green !important;
+    color: $brand-cloudy-green !important;
   }
 
   &:disabled {

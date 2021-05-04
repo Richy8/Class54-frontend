@@ -1,11 +1,18 @@
 <template>
   <div class="table-body">
-    <div class="set-one text-left">26343GD</div>
-    <div class="set-two text-left">2019</div>
+    <div class="set-one text-left">2643GD</div>
+    <div class="set-two text-left">
+      Use of English
+    </div>
     <div class="set-three text-left">
       This was a great year to start practicibg my new move.
     </div>
-    <div class="set-four text-center">
+    <div class="set-four text-left">
+      <div class="avatar">
+        <img v-lazy="dynamicImg('JAMB.png')" alt="" class="avatar-img" />
+      </div>
+    </div>
+    <div class="set-five text-center">
       <div
         class="icon icon-more brand-black cfont-16 pointer"
         @click="toggleDropdown"
@@ -21,7 +28,7 @@
             <div class="value-text">Edit</div>
           </div>
 
-          <div class="item mgb-4" @click="deleteTopic">
+          <div class="item mgb-4" @click="deleteSubject">
             <div class="icon icon-delete"></div>
             <div class="value-text">Delete</div>
           </div>
@@ -35,7 +42,7 @@
 import { mixin as clickaway } from "vue-clickaway";
 
 export default {
-  name: "TopicsTableBody",
+  name: "SubjectTableBody",
 
   mixins: [clickaway],
 
@@ -54,7 +61,7 @@ export default {
       this.show_dropdown = false;
     },
 
-    deleteTopic() {
+    deleteSubject() {
       this.$bus.$emit("show-error-modal");
     },
   },

@@ -1,11 +1,24 @@
 <template>
   <div class="table-body">
-    <div class="set-one text-left">26343GD</div>
-    <div class="set-two text-left">2019</div>
-    <div class="set-three text-left">
-      This was a great year to start practicibg my new move.
+    <div class="set-one text-left">2643GD</div>
+    <div class="set-two text-left">
+      Nigeria
     </div>
-    <div class="set-four text-center">
+    <div class="set-three text-left">
+      Nigeria our country, what a place..
+    </div>
+    <div class="set-four text-left">
+      Ng
+    </div>
+    <div class="set-five text-left">
+      +234
+    </div>
+    <div class="set-six text-left">
+      <div class="avatar">
+        <img v-lazy="dynamicImg('JAMB.png')" alt="" class="avatar-img" />
+      </div>
+    </div>
+    <div class="set-seven text-center">
       <div
         class="icon icon-more brand-black cfont-16 pointer"
         @click="toggleDropdown"
@@ -21,7 +34,7 @@
             <div class="value-text">Edit</div>
           </div>
 
-          <div class="item mgb-4" @click="deleteTopic">
+          <div class="item mgb-4" @click="deleteCountry">
             <div class="icon icon-delete"></div>
             <div class="value-text">Delete</div>
           </div>
@@ -35,7 +48,7 @@
 import { mixin as clickaway } from "vue-clickaway";
 
 export default {
-  name: "TopicsTableBody",
+  name: "CountryTableBody",
 
   mixins: [clickaway],
 
@@ -54,7 +67,7 @@ export default {
       this.show_dropdown = false;
     },
 
-    deleteTopic() {
+    deleteCountry() {
       this.$bus.$emit("show-error-modal");
     },
   },

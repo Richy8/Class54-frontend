@@ -13,18 +13,23 @@
 
         <!-- TITLE -->
         <div
-          class="modal-title brand-dark-blue font-weight-700 mgb-12 text-center"
+          class="modal-title brand-dark-blue font-weight-700 mgb-12 text-center text-capitalize"
         >
-          Years Created!
+          {{ page_singular }} Created!
         </div>
 
         <!-- META TEXT -->
-        <div class="meta-text dark-text text-center mgb-14">
-          Click on ‘Got it’ to redirect to the see all the years
+        <div class="meta-text dark-text text-center mgb-25">
+          Click on ‘Got it’ to redirect to the see all the {{ page_plural }}
         </div>
 
         <div class="button-row d-flex justify-content-center w-100">
-          <button class="btn btn-md btn-primary pdx-40 mgl-2">Got it</button>
+          <button
+            @click="redirectToTargetPage"
+            class="btn btn-md btn-primary pdx-40 mgl-2"
+          >
+            Got it
+          </button>
         </div>
       </div>
     </template>
@@ -41,6 +46,24 @@ export default {
   components: {
     Modal,
     SuccessIcon,
+  },
+
+  mounted() {
+    console.log(this.$route.path);
+  },
+
+  data() {
+    return {
+      page_singular: this.$route.path.split("/")[1],
+      page_plural: this.$route.meta.title,
+    };
+  },
+
+  methods: {
+    redirectToTargetPage() {
+      this.$emit("closeTriggered");
+      this.$router.push(`/${this.page_singular}/all-${this.page_singular}`);
+    },
   },
 };
 </script>

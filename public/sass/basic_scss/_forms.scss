@@ -156,7 +156,7 @@ input[type="checkbox"],
   }
 
   &:disabled {
-    // background-color: $border-grey-light;
+    background-color: $grey-text;
     border-color: transparent;
     @include square-shape(21);
     margin-right: 4px;
@@ -168,8 +168,8 @@ input[type="checkbox"],
     @include square-shape(21);
     margin-top: -0.125rem;
     margin-right: 0.4688rem;
-    // border: 0.125rem solid $border-border-grey;
-    border-radius: 0.1875rem;
+    border: 0.1875rem solid $grey-text;
+    border-radius: 0.218rem;
     transition: all 240ms;
     overflow: hidden;
   }
@@ -177,11 +177,11 @@ input[type="checkbox"],
   &:checked:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0.5px;
     left: 7px;
     display: table;
     @include rectangle-shape(6, 14);
-    border: 0.125rem solid $brand-white;
+    border: 0.1875rem solid $brand-white;
     border-top-width: 0;
     border-left-width: 0;
     transform: rotate(45deg);
@@ -193,16 +193,16 @@ input[type="checkbox"],
   }
 
   &:disabled:after {
-    // border-color: $border-border-grey;
+    border-color: $grey-text;
   }
 
   &:disabled:checked:after {
-    // background-color: $border-light-grey;
+    background-color: $grey-text;
     border-color: transparent;
   }
 
   &:disabled:checked:before {
-    // border-color: $border-border-grey;
+    border-color: $grey-text;
   }
 
   .checkbox-md & {
@@ -277,4 +277,155 @@ label {
   font-weight: 600;
   right: 16px;
   z-index: 9;
+}
+
+// FORM ATTACHMENT ROW
+.attach-row {
+  @include flex-row-start-wrap;
+
+  .attach-text {
+    @include font-height(13, 16);
+    padding: 20px 0px;
+  }
+}
+
+.check-row {
+  @include flex-row-start-nowrap;
+  max-width: max-content;
+
+  .text {
+    @include font-height(15, 15);
+    color: $brand-black;
+    margin-top: 4px;
+    user-select: none;
+  }
+}
+
+// CUSTOM SELECT FROPDOWN
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .select-input {
+    height: auto;
+    max-height: auto;
+
+    .placeholder-text {
+      @include font-height(14.5, 15);
+      color: $light-dark-text;
+    }
+
+    .selections {
+      @include flex-row-start-wrap;
+      width: 97.25%;
+
+      .select-text {
+        @include font-height(14, 15);
+        text-align: left;
+        color: $dark-text;
+      }
+
+      .select-card {
+        @include flex-row-center-nowrap;
+        @include font-height(13.75, 15);
+        @include transition(0.4s);
+        padding: 11px 16px;
+        border-radius: 24px;
+        background: $brand-cloudy-green;
+        margin: 2px 3px 3px 0;
+        color: $brand-accent-green;
+
+        .icon {
+          position: relative;
+          top: 2px;
+          font-size: 15px;
+        }
+
+        &:hover {
+          background: $brand-red-light;
+          color: $brand-red;
+        }
+      }
+    }
+
+    .dropdown-icon {
+      @include center-y;
+      right: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .select-option-wrapper {
+    position: absolute;
+    width: 100%;
+    padding: 1rem 1rem;
+    background: $brand-white;
+    box-shadow: 0px 3.5px 6px rgba(60, 61, 75, 0.1);
+
+    .search-bar {
+      position: relative;
+
+      input {
+        padding-left: 40px;
+        &::placeholder {
+          font-weight: 600;
+          color: $dark-text;
+          font-size: 14.5px;
+        }
+      }
+
+      .icon {
+        @include center-y;
+        left: 15px;
+        font-size: 19px;
+      }
+    }
+
+    .option-row {
+      @include flex-row-between-nowrap;
+      @include font-height(14, 25);
+      color: $dark-text;
+      text-align: left;
+      padding: 10px 15px;
+      margin-bottom: 2px;
+      cursor: pointer;
+      @include transition(0.5s);
+
+      &:hover {
+        background: rgba($brand-cloudy-green, 0.7);
+      }
+    }
+
+    .option-mix-row {
+      padding: 10px;
+      width: 100%;
+      @include flex-row-between-nowrap;
+
+      .left {
+        @include flex-row-start-nowrap;
+        .text {
+          position: relative;
+          top: 2.5px;
+        }
+      }
+
+      .right {
+        .avatar {
+          @include square-shape(26);
+        }
+      }
+    }
+
+    .button-row {
+      @include flex-row-end-nowrap;
+    }
+  }
+
+  .active-select-input {
+    box-shadow: none;
+    border: 0.0625rem solid $brand-green;
+    background: $brand-white;
+  }
 }

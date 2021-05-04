@@ -1,20 +1,17 @@
 <template>
   <div class="all-topics-page">
-    <breadcrumb-bar item_two="All Faculties" />
+    <breadcrumb-bar item_two="All Exams" />
 
     <div class="full-width-page">
-      <entry-search-row
-        btn_text="New Faculty"
-        btn_link="Class54CreateFaculty"
-      />
+      <entry-search-row btn_text="New Exam" btn_link="Class54CreateExam" />
 
       <!-- TABLE -->
       <div class="table-wrapper w-100">
-        <div class="base-table faculty-table">
-          <faculty-table-header />
-          <faculty-table-body />
-          <faculty-table-body />
-          <faculty-table-body />
+        <div class="base-table exam-table">
+          <exam-table-header />
+          <exam-table-body />
+          <exam-table-body />
+          <exam-table-body />
         </div>
       </div>
       <!-- TABLE -->
@@ -28,18 +25,18 @@
 import BreadcrumbBar from "@/components/globalComps/BreadcrumbBar";
 import EntrySearchRow from "@/components/globalComps/EntrySearchRow";
 import PaginationRow from "@/components/globalComps/PaginationRow";
-import FacultyTableHeader from "@/components/tableComps/FacultyTable/FacultyTableHeader";
-import FacultyTableBody from "@/components/tableComps/FacultyTable/FacultyTableBody";
+import ExamTableHeader from "@/components/tableComps/ExamTable/ExamTableHeader";
+import ExamTableBody from "@/components/tableComps/ExamTable/ExamTableBody";
 
 export default {
-  name: "AllFaculty",
+  name: "AllExam",
 
   components: {
     BreadcrumbBar,
     EntrySearchRow,
     PaginationRow,
-    FacultyTableHeader,
-    FacultyTableBody,
+    ExamTableHeader,
+    ExamTableBody,
   },
 };
 </script>

@@ -11,8 +11,10 @@
     />
 
     <!-- MODAL -->
-    <success-modal v-if="show_success" @closeTriggered="toggleSuccessModal" />
-    <error-modal v-if="show_error" @closeTriggered="toggleErrorModal" />
+    <transition name="fade">
+      <success-modal v-if="show_success" @closeTriggered="toggleSuccessModal" />
+      <error-modal v-if="show_error" @closeTriggered="toggleErrorModal" />
+    </transition>
   </div>
 </template>
 
@@ -43,6 +45,11 @@ export default {
 
     this.$bus.$on("show-success-modal", () => this.toggleSuccessModal());
     this.$bus.$on("show-error-modal", () => this.toggleErrorModal());
+  },
+
+  mounted() {
+    this.show_success = false;
+    this.show_error = false;
   },
 
   methods: {

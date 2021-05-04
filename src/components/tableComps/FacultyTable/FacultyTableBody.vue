@@ -24,7 +24,7 @@
             <div class="value-text">Edit</div>
           </div>
 
-          <div class="item mgb-4">
+          <div class="item mgb-4" @click="deleteFaculty">
             <div class="icon icon-delete"></div>
             <div class="value-text">Delete</div>
           </div>
@@ -55,6 +55,10 @@ export default {
 
     closeDropdown() {
       this.show_dropdown = false;
+    },
+
+    deleteFaculty() {
+      this.$bus.$emit("show-error-modal");
     },
   },
 };
