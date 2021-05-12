@@ -68,7 +68,59 @@
           </div>
 
           <div class="col-12 col-md-7 col-lg-6">
-            <single-select placeholder="Select one" />
+            <single-select
+              toggleText="toggleCategorySelect"
+              dropText="dropCategorySelect"
+              @toggleCategorySelect="toggleCategorySelect"
+              @dropCategorySelect="dropCategorySelect"
+            >
+              <template slot="inputWrapper">
+                <div
+                  class="select-input form-control pointer smooth-transition"
+                  ref="selectInput"
+                  :class="category_focus ? 'active-select-input' : null"
+                >
+                  <!-- SELECTIONS -->
+                  <div class="selections" v-if="false">
+                    <!-- SELECT CARD -->
+                    <div class="select-text">
+                      Nigeria
+                    </div>
+                  </div>
+
+                  <!-- PLACEHOLDER TEXT -->
+                  <div class="placeholder-text">
+                    Select Category
+                  </div>
+
+                  <!-- CLOSE BUTTON -->
+                  <div
+                    class="dropdown-icon icon-chevron-down brand-black"
+                  ></div>
+                </div>
+              </template>
+
+              <template slot="optionsWrapper">
+                <div
+                  class="select-option-wrapper rounded-4 index-1 mgt-5 smooth-animation smooth-transition"
+                  v-if="category_focus"
+                >
+                  <!-- SEARCH BAR -->
+                  <div class="search-bar mgb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search"
+                    />
+                    <div class="icon icon-search light-dark-text index-9"></div>
+                  </div>
+
+                  <!-- OPTIONS -->
+                  <div class="option-row">Category 1</div>
+                  <div class="option-row">Category 2</div>
+                </div>
+              </template>
+            </single-select>
           </div>
         </div>
 
@@ -128,9 +180,23 @@ export default {
     SingleSelect,
   },
 
+  data() {
+    return {
+      category_focus: false,
+    };
+  },
+
   methods: {
     createSchool() {
       this.$bus.$emit("show-success-modal");
+    },
+
+    toggleCategorySelect() {
+      this.category_focus = !this.category_focus;
+    },
+
+    dropCategorySelect() {
+      this.category_focus = false;
     },
   },
 };

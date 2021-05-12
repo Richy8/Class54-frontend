@@ -239,10 +239,12 @@ button[disabled] {
   }
 
   .right {
+    position: relative;
     @include flex-row-end-nowrap;
 
     @include breakpoint-custom-down(827) {
       margin-top: 15px;
+      margin-bottom: 15px !important;
     }
 
     @include breakpoint-custom-down(578) {
@@ -251,6 +253,7 @@ button[disabled] {
 
     @include breakpoint-custom-down(565) {
       margin-top: 15px;
+      margin-bottom: 20px !important;
     }
 
     .nav {
@@ -258,6 +261,7 @@ button[disabled] {
       min-width: 24px;
       border-radius: 4px;
       cursor: pointer;
+      color: $light-dark-text;
       @include transition(0.4s);
 
       @include breakpoint-down(sm) {
@@ -267,12 +271,17 @@ button[disabled] {
 
       .icon {
         font-size: 18.5px;
-        color: $light-dark-text;
         font-weight: 600;
 
         @include breakpoint-down(sm) {
           font-size: 17.75px;
         }
+      }
+
+      .nav-text {
+        @include font-height(13.75, 24);
+        position: relative;
+        top: -0.5px;
       }
 
       &:hover {
@@ -282,40 +291,29 @@ button[disabled] {
 
     .paging {
       @include flex-row-center-nowrap;
-      .item {
-        padding: 4.5px 5px;
-        min-width: 34px;
-        text-align: center;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 600;
-        @include font-height(13, 25);
-        color: $light-dark-text;
-        @include transition(0.4s);
+      @include font-height(14, 25);
+      color: $dark-text;
 
-        @include breakpoint-down(sm) {
-          padding: 4px 4.5px;
-          min-width: 32px;
-          @include font-height(12.75, 24);
-        }
-
-        .icon {
-          font-size: 24px;
-        }
-
-        &:hover {
-          background: rgba($brand-cloudy-green, 0.7);
-        }
+      .page-input {
+        @include rectangle-shape(42, 21);
+        padding: 15px 8px
       }
 
-      .active-item {
-        background: $brand-green;
-        color: $brand-white !important;
-
-        &:hover {
-          background: $brand-accent-green;
-        }
+      .page-btn {
+        @include rectangle-shape(30, 26);
+        @include font-height(12.75, 15);
+        padding: 15px 20px;
       }
+
+    }
+
+    .error-text {
+      position: absolute;
+      left: 12px;
+      top: 44px;
+      @include font-height(12, 16);
+      color: $brand-red;
+      font-weight: 600;
     }
   }
 }

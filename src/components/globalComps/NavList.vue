@@ -213,9 +213,15 @@ export default {
                 route_icon: "novel",
               },
               children: [
-                { route_name: "All Novels", route_link: "" },
-                { route_name: "Create Novel", route_link: "" },
-                { route_name: "Add/Edit Chapter", route_link: "" },
+                { route_name: "All Novels", route_link: "Class54AllNovel" },
+                {
+                  route_name: "Create Novel",
+                  route_link: "Class54CreateNovel",
+                },
+                {
+                  route_name: "Add/Edit Chapter",
+                  route_link: "Class54AddNovelChapter",
+                },
               ],
             },
             {
@@ -225,8 +231,11 @@ export default {
                 route_icon: "study-note",
               },
               children: [
-                { route_name: "All Notes", route_link: "" },
-                { route_name: "Add/Edit Note Content", route_link: "" },
+                { route_name: "All Notes", route_link: "Class54AllStudyNotes" },
+                {
+                  route_name: "Add/Edit Note Content",
+                  route_link: "Class54CreateStudyNotes",
+                },
               ],
             },
           ],
@@ -242,8 +251,14 @@ export default {
                 route_icon: "mail",
               },
               children: [
-                { route_name: "All Notifications", route_link: "" },
-                { route_name: "Create Notifications", route_link: "" },
+                {
+                  route_name: "All Notifications",
+                  route_link: "Class54AllNotification",
+                },
+                {
+                  route_name: "Create Notifications",
+                  route_link: "Class54CreateNotification",
+                },
               ],
             },
             {
@@ -253,8 +268,11 @@ export default {
                 route_icon: "users",
               },
               children: [
-                { route_name: "All Users", route_link: "" },
-                { route_name: "Create Users", route_link: "" },
+                { route_name: "All Users", route_link: "Class54AllUsers" },
+                {
+                  route_name: "Create Users",
+                  route_link: "Class54CreateUsers",
+                },
               ],
             },
             {

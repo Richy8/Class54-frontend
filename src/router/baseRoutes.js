@@ -18,6 +18,19 @@ const baseRoutes = [
       },
 
       {
+        path: "profile/user-profile",
+        name: "Class54AllProfile",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/settingsPages/Profile"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Profile",
+        },
+      },
+
+      {
         path: "/year/all-year",
         name: "Class54AllYears",
         component: () =>
@@ -222,6 +235,123 @@ const baseRoutes = [
         meta: {
           requiresAuth: true,
           title: "Exams",
+        },
+      },
+
+      {
+        path: "/novel/all-novel",
+        name: "Class54AllNovel",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/novelPages/AllNovel"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Novels",
+        },
+      },
+
+      {
+        path: "/novel/create-novel",
+        name: "Class54CreateNovel",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/novelPages/CreateNovel"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Novels",
+        },
+      },
+
+      {
+        path: "/novel/add-novel-chapter",
+        name: "Class54AddNovelChapter",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/novelPages/AddNovelChapter"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Novels",
+        },
+      },
+
+      {
+        path: "/study-notes/all-study-notes",
+        name: "Class54AllStudyNotes",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/novelPages/AllStudyNotes"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Study Notes",
+        },
+      },
+
+      {
+        path: "/study-notes/create-study-notes",
+        name: "Class54CreateStudyNotes",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/novelPages/CreateStudyNotes"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Study Notes",
+        },
+      },
+
+      {
+        path: "/user/all-user",
+        name: "Class54AllUsers",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/settingsPages/AllUsers"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Users",
+        },
+      },
+
+      {
+        path: "/user/create-user",
+        name: "Class54CreateUsers",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/settingsPages/CreateUsers"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Users",
+        },
+      },
+
+      {
+        path: "/notification/all-notification",
+        name: "Class54AllNotification",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/settingsPages/AllNotification"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Notifications",
+        },
+      },
+
+      {
+        path: "/notification/create-notification",
+        name: "Class54CreateNotification",
+        component: () =>
+          import(
+            /* webpackChunkName: "baseRoute" */ "@/pages/settingsPages/CreateNotification"
+          ),
+        meta: {
+          requiresAuth: true,
+          title: "Notifications",
         },
       },
     ],

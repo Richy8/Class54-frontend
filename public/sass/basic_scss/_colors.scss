@@ -22,11 +22,13 @@ $dark-text: #4f4f4f;
 $deep-red: #da1414;
 $light-dark-text: #828282;
 
+$toast-brown: #FFE6D0;
+$toast-deep-brown: #BC661A;
+$toast-green: #EDF9F0;
+
 // App Color Pallete
 $app-color: () !default;
-$app-color: map-merge(
-  (
-    "brand-green": $brand-green,
+$app-color: map-merge(("brand-green": $brand-green,
     "brand-dark-green": $brand-dark-green,
     "brand-accent-green": $brand-accent-green,
     "brand-dark-blue": $brand-dark-blue,
@@ -46,14 +48,17 @@ $app-color: map-merge(
     "deep-red": $deep-red,
     "light-dark-text": $light-dark-text,
     "brand-red-light": $brand-red-light,
+    "toast-brown": $toast-brown,
+    "toast-deep-brown": $toast-deep-brown,
+    "toast-green": $toast-green,
   ),
-  $app-color
-);
+  $app-color);
 
 /*------------------------------------*\
 	App Color Palette
 \*------------------------------------*/
-@each $color-name, $color in $app-color {
+@each $color-name,
+$color in $app-color {
   .#{$color-name} {
     color: $color !important;
   }

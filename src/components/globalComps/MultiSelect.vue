@@ -7,7 +7,7 @@
       :class="is_focus ? 'active-select-input' : null"
     >
       <!-- SELECTIONS -->
-      <div class="selections">
+      <div class="selections" v-if="false">
         <!-- SELECT CARD -->
         <div class="select-card">
           <div class="text mgr-4">Nigeria</div>
@@ -16,7 +16,7 @@
       </div>
 
       <!-- PLACEHOLDER TEXT -->
-      <div class="placeholder-text" v-if="false">{{ placeholder }}</div>
+      <div class="placeholder-text">{{ placeholder }}</div>
 
       <!-- CLOSE BUTTON -->
       <div class="dropdown-icon icon-chevron-down brand-black"></div>

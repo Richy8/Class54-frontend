@@ -3,7 +3,7 @@
     class="profile-dropdown position-absolute rounded-4 box-shadow-effect smooth-transition smooth-animation"
   >
     <!-- PROFILE LINK   -->
-    <router-link to>
+    <router-link :to="{ name: 'Class54AllProfile' }">
       <div class="icon">
         <user-icon size="cfont-16-5 box-16" />
       </div>

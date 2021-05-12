@@ -6,6 +6,7 @@
 input {
   &::placeholder {
     color: $grey-text !important;
+    font-weight: 500 !important;
   }
 
   &:focus {
@@ -38,7 +39,7 @@ input[disabled] {
   @include font-height(14, 16);
   padding: 1.1875rem 1rem;
   background: $brand-grey;
-  color: $grey-text;
+  color: $dark-text;
   border: 0.0625rem solid $brand-border-grey;
   box-sizing: border-box;
   border-radius: 0.25rem !important;
@@ -56,6 +57,7 @@ input[disabled] {
   box-shadow: 0 0 0 transparent;
   box-shadow: unset;
   vertical-align: middle;
+  font-weight: 500;
 
   &:focus {
     outline: 0;
@@ -73,6 +75,7 @@ input[disabled] {
   .form-control {
     border: 1px solid $brand-red;
   }
+
   .error-input-msg {
     @include font-height(12, 16);
   }
@@ -103,35 +106,36 @@ input[type="radio"],
   &:after {
     content: "";
     display: block;
-    @include square-shape(24);
+    @include square-shape(22);
     border-radius: 50%;
     transition: all 240ms;
-
-    @include breakpoint-down(sm) {
-      @include square-shape(20);
-    }
   }
 
   &:before {
     position: absolute;
-    left: 0;
-    top: -3px;
-    background-color: $brand-green;
+    @include square-shape(9);
+    @include transition(0.2s);
+    background-color: transparent;
     transform: scale(0);
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+    z-index: 1;
   }
 
   &:after {
     position: relative;
-    top: -3px;
-    // border: 2px solid $border-border-grey;
+    border: 2px solid $grey-text;
   }
 
   &:checked:before {
-    transform: scale(0.5);
+    background: $brand-white;
+    transform: scale(1.1);
   }
 
   &:checked:after {
-    border-color: $brand-green;
+    border: none;
+    background: $brand-green;
   }
 
   &:disabled:after,
@@ -178,7 +182,7 @@ input[type="checkbox"],
     content: "";
     position: absolute;
     top: 0.5px;
-    left: 7px;
+    left: 7.5px;
     display: table;
     @include rectangle-shape(6, 14);
     border: 0.1875rem solid $brand-white;
@@ -206,6 +210,7 @@ input[type="checkbox"],
   }
 
   .checkbox-md & {
+
     &:before,
     &:after {
       @include square-shape(24);
@@ -242,8 +247,8 @@ input[type="checkbox"],
   display: inline-flex;
   align-items: center;
 
-  + .radio-inline,
-  + .checkbox-inline {
+  +.radio-inline,
+  +.checkbox-inline {
     margin-left: 30px;
   }
 }
@@ -252,7 +257,7 @@ label {
   font-weight: normal;
 
   &.radio-inline {
-    + label {
+    +label {
       margin-left: 30px;
     }
   }
@@ -277,6 +282,36 @@ label {
   font-weight: 600;
   right: 16px;
   z-index: 9;
+}
+
+// SELECT OPTION TOGGLER 
+.select-option-toggler {
+  position: relative;
+  @include rectangle-shape(36, 21.25);
+  @include transition(0.15s);
+  border-radius: 40px;
+  background: $brand-border-grey;
+  padding: 2px;
+
+  .option-indicator {
+    @include square-shape(16.75);
+    @include center-y;
+    background: $brand-white;
+    left: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: .25px;
+    @include transition(0.15s);
+  }
+}
+
+.active-select-toggler {
+  background: $brand-green;
+
+  .option-indicator {
+    left: auto;
+    right: 2px;
+  }
 }
 
 // FORM ATTACHMENT ROW
@@ -306,6 +341,7 @@ label {
   position: relative;
   width: 100%;
   height: auto;
+  margin-bottom: 30px;
 
   .select-input {
     height: auto;
@@ -363,12 +399,14 @@ label {
     padding: 1rem 1rem;
     background: $brand-white;
     box-shadow: 0px 3.5px 6px rgba(60, 61, 75, 0.1);
+    z-index: 9;
 
     .search-bar {
       position: relative;
 
       input {
         padding-left: 40px;
+
         &::placeholder {
           font-weight: 600;
           color: $dark-text;
@@ -405,6 +443,7 @@ label {
 
       .left {
         @include flex-row-start-nowrap;
+
         .text {
           position: relative;
           top: 2.5px;

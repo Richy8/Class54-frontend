@@ -58,6 +58,48 @@
           </div>
         </div>
 
+        <!-- TEST TYPE -->
+        <div class="form-row row">
+          <div class="col-12 col-md-5 col-lg-6 mb-3 mb-md-0 pdt-10">
+            <div class="title-text">Test Type</div>
+            <div class="meta-text">
+              Objective or theory
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-md-7 col-lg-6 d-flex justify-content-start align-items-center flex-nowrap"
+          >
+            <!-- OBJECTIVE  -->
+            <div class="mgr-30">
+              <label class="check-row pointer" for="objective">
+                <input
+                  type="radio"
+                  v-model="test_type"
+                  value="objective"
+                  class="mgr-10"
+                  id="objective"
+                />
+                <div class="text">Objective only</div>
+              </label>
+            </div>
+
+            <!-- OBJECTIVE AND THEORY  -->
+            <div>
+              <label class="check-row pointer" for="objectiveTheory">
+                <input
+                  type="radio"
+                  v-model="test_type"
+                  value="objective_theory"
+                  class="mgr-10"
+                  id="objectiveTheory"
+                />
+                <div class="text">Objective & Theory</div>
+              </label>
+            </div>
+          </div>
+        </div>
+
         <!-- COUNTRY -->
         <div class="form-row row">
           <div class="col-12 col-md-5 col-lg-6 mb-3 mb-md-0">
@@ -179,6 +221,12 @@ export default {
   components: {
     BreadcrumbBar,
     MultiSelect,
+  },
+
+  data() {
+    return {
+      test_type: "objective_theory",
+    };
   },
 
   methods: {

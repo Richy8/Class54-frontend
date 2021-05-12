@@ -175,6 +175,7 @@
       width: 100px;
     }
   }
+
   .set-five {
     width: 25%;
 
@@ -186,10 +187,14 @@
 
 .country-table,
 .school-table,
-.exam-table {
+.exam-table,
+.novel-table,
+.note-table,
+.notification-table {
   .set-one {
     width: 12.5%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 100px;
@@ -199,6 +204,7 @@
   .set-two {
     width: 14%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 130px;
@@ -208,6 +214,7 @@
   .set-three {
     width: 22%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 180px;
@@ -217,6 +224,7 @@
   .set-four {
     width: 13%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 100px;
@@ -226,6 +234,7 @@
   .set-five {
     width: 13%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 120px;
@@ -235,6 +244,7 @@
   .set-six {
     width: 7.5%;
     padding-right: 10px;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 90px;
@@ -243,6 +253,7 @@
 
   .set-seven {
     width: 17.5%;
+    text-align: left;
 
     @include breakpoint-down(lg) {
       width: 120px;
@@ -320,6 +331,250 @@
 
     @include breakpoint-down(lg) {
       width: 120px;
+    }
+  }
+}
+
+.novel-table {
+  .set-one {
+    width: 10%;
+
+    @include breakpoint-down(lg) {
+      width: 80px;
+    }
+  }
+
+  .set-two {
+    width: 20%;
+
+    @include breakpoint-down(lg) {
+      width: 150px;
+    }
+  }
+
+  .set-three {
+    width: 10%;
+
+    @include breakpoint-down(lg) {
+      width: 80px;
+    }
+  }
+
+  .set-four {
+    width: 10%;
+
+    @include breakpoint-down(lg) {
+      width: 80px;
+    }
+  }
+
+  .set-five {
+    width: 13%;
+
+    @include breakpoint-down(lg) {
+      width: 110px;
+    }
+  }
+
+  .set-six {
+    width: 11%;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-seven {
+    width: 11%;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-eight {
+    width: 15%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+}
+
+.note-table {
+  .set-one {
+    width: 12%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-two {
+    width: 28%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 130px;
+    }
+  }
+
+  .set-three {
+    width: 22%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 200px;
+    }
+  }
+
+  .set-four {
+    width: 20%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-five {
+    width: 20%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+}
+
+.user-table {
+  .set-one {
+    width: 16%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 110px;
+    }
+  }
+
+  .set-two {
+    width: 30%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 200px;
+    }
+  }
+
+  .set-three {
+    width: 16%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 130px;
+    }
+  }
+
+  .set-four {
+    width: 25%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 200px;
+    }
+  }
+
+  .set-five {
+    width: 12%;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-six {
+    width: 12%;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-seven {
+    width: 12%;
+
+    @include breakpoint-down(lg) {
+      width: 80px;
+    }
+  }
+
+  .set-eight {
+    width: 20%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+}
+
+.notification-table {
+  .set-one {
+    width: 12%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 100px;
+    }
+  }
+
+  .set-two {
+    width: 10%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 90px;
+    }
+  }
+
+  .set-three {
+    width: 24%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 180px;
+    }
+  }
+
+  .set-four {
+    width: 32%;
+    padding-right: 10px;
+
+    @include breakpoint-down(lg) {
+      width: 210px;
+    }
+  }
+
+  .set-five {
+    width: 22%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+
+  .set-six {
+    width: 10%;
+
+    @include breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
+
+  .set-seven {
+    width: 18%;
+
+    @include breakpoint-down(lg) {
+      width: 80px;
     }
   }
 }

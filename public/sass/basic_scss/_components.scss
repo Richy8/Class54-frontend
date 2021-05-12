@@ -1,5 +1,6 @@
 // ANIMATIONS
 @keyframes panel-slide-down {
+
   0%,
   30% {
     margin-top: -20px;
@@ -13,6 +14,7 @@
 }
 
 @keyframes panel-slide-up {
+
   0%,
   30% {
     margin-bottom: -30px;
@@ -26,6 +28,7 @@
 }
 
 @keyframes panel-slide-right {
+
   0%,
   30% {
     margin-top: -30px;
@@ -39,6 +42,7 @@
 }
 
 @keyframes panel-slide-left {
+
   0%,
   30% {
     margin-left: -60px;
@@ -102,6 +106,7 @@
       .form-control {
         font-size: 13px;
       }
+
       .input-md {
         min-height: 44px;
       }
@@ -173,6 +178,7 @@
 
   .bottom-row {
     margin-bottom: 0px;
+
     .btn {
       @include breakpoint-down(sm) {
         font-size: 9px !important;
@@ -180,4 +186,144 @@
       }
     }
   }
+
+  .profile-wrapper {
+    position: relative;
+
+    .user-profile-card {
+      padding: 32px;
+      @include flex-column-start-center;
+      height: 100%;
+
+      .title-text {
+        @include font-height(16, 22);
+      }
+
+      .user-role {
+        @include font-height(14, 25);
+      }
+    }
+  }
+
+  .profile-update-wrapper {
+    padding-left: 30px;
+    padding-right: 0px;
+  }
+}
+
+// TEXT EDITOR 
+.text-editor {
+  .tools-row {
+    @include flex-row-between-wrap;
+    border-radius: 3px 3px 0px 0px;
+    padding: 13px 24px;
+    width: 100%;
+
+    @include breakpoint-down(md) {
+      padding: 13px 18px;
+    }
+
+    .left-tools {
+      @include flex-row-between-nowrap;
+      width: 48%;
+      padding-right: 50px;
+
+      @include breakpoint-down(lg) {
+        padding-right: 10px;
+      }
+
+      @include breakpoint-down(md) {
+        padding-right: 0px;
+        width: 100%;
+      }
+    }
+
+    .text-format-tools,
+    .text-align-tools {
+      @include flex-row-start-nowrap;
+      font-size: 13.5px;
+
+      .icon {
+        @include transition(0.4s);
+        padding: 0px 6px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:first-of-type {
+          padding-left: 0px;
+        }
+
+        &:hover {
+          color: $brand-green;
+        }
+      }
+    }
+
+    .text-align-tools {
+      font-size: 15px;
+
+      .icon {
+        font-size: 15.5px !important;
+      }
+    }
+
+    .right-tools {
+      @include flex-row-between-nowrap;
+      width: 48%;
+      padding-left: 50px;
+
+      @include breakpoint-down(lg) {
+        padding-left: 20px;
+      }
+
+      @include breakpoint-down(md) {
+        margin-top: 15px;
+        padding-left: 0px;
+        width: 100%;
+      }
+
+      .icon {
+        font-size: 15.5px !important;
+      }
+    }
+  }
+
+  .wrapper {
+    height: auto;
+
+    min-height: 200px;
+    max-height: 450px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: $brand-border-grey;
+    }
+
+    .content-area {
+      min-height: 200px;
+      max-height: 450px;
+      border: 1px solid $brand-border-grey;
+      outline: none;
+      padding: 20px 24px;
+      word-wrap: break-word;
+      white-space: pre-line;
+      color: $dark-text;
+      background: transparent !important;
+
+      &:focus {
+        border: 1px solid $brand-border-grey;
+        outline: none;
+      }
+    }
+  }
+
 }

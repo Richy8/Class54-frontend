@@ -12,24 +12,32 @@
       </div>
     </div>
 
-    <div class="right">
+    <div class="right mgb-5">
       <div class="nav">
         <div class="icon icon-chevron-down rotate-90"></div>
+        <div class="nav-text mgl-3 pdr-4">Prev</div>
       </div>
 
       <!--PAGING -->
       <div class="paging">
-        <div class="item">1</div>
-        <div class="item active-item">2</div>
-        <div class="item">3</div>
-        <div class="item">
-          <div class="icon icon-more rotate-90"></div>
-        </div>
-        <div class="item">9</div>
+        <input
+          type="text"
+          class="form-control page-input text-center mgr-7"
+          placeholder="1"
+        />
+        <div class="page-slash">/</div>
+        <div class="page-total mgl-5 mgr-4">237</div>
+        <button class="btn btn-primary mgl-4 page-btn">Go</button>
       </div>
 
       <div class="nav">
+        <div class="nav-text mgr-3 pdl-5">Next</div>
         <div class="icon icon-chevron-down rotate--90"></div>
+      </div>
+
+      <!-- ERROR TEXT -->
+      <div class="error-text" v-if="false">
+        The page number entered does not exist
       </div>
     </div>
   </div>
